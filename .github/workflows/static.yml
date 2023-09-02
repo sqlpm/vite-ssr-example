@@ -38,8 +38,7 @@ jobs:
       - name: Install packages
         run: pnpm i
       - name: Build
-        run: |
-          pnpm generate
+        run: pnpm generate
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
