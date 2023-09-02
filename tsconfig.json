@@ -1,0 +1,31 @@
+// see https://www.typescriptlang.org/tsconfig
+{
+  "compilerOptions": {
+    // top level await
+    "target": "es2022",
+    // react-jsx allows us to use React without explicitly importing it.
+    // Stops the error 'React' refers to a UMD global, but the current file
+    //  is a module. Consider adding an import instead.
+    "jsx": "react-jsx",
+    // stronger guarantees of program correctness
+    "strict": true,
+    // speed up 
+    "skipLibCheck": true,
+    // defines what process is used to find a module
+    // see https://www.typescriptlang.org/docs/handbook/module-resolution.html
+    // node16 for modern node. Supports ECMAScript imports and CommonJS require.
+    "moduleResolution": "node16",
+    // fix some import compatibility issues
+    "esModuleInterop": true,
+    // assure case-sensitive file names are honored
+    "forceConsistentCasingInFileNames": true,
+    // emitter settings
+    // https://stackoverflow.com/questions/71463698/why-we-need-nodenext-typescript-compiler-option-when-we-have-esnext
+    "module": "nodenext",
+    // Allow synthetic default imports from modules with no default export.
+    // example: import React from 'react';
+    "allowSyntheticDefaultImports": true,
+    // Only emit .d.ts files; do not emit .js files.
+    // "emitDeclarationOnly": true
+  }
+}
