@@ -6,7 +6,7 @@ const routes = Object.keys(PagePathsWithComponents).map((path: string) => {
   const name = path.match(/\.\/pages\/(.*)\.tsx$/)![1];
   return {
     name,
-    path: name === 'Home' ? '/vie-ssr-example' : `/vie-ssr-example/${name.toLowerCase()}`,
+    path: name === 'Home' ? '/vite-ssr-example' : `/vite-ssr-example/${name.toLowerCase()}`,
     component: PagePathsWithComponents[path].default,
   };
 });
